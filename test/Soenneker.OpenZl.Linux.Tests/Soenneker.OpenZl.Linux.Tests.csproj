@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup><PackageReference Include="TUnit" Version="1.72.16" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Soenneker.OpenZl.Linux\Soenneker.OpenZl.Linux.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\src\Soenneker.OpenZl.Linux\Resources\**\*" Link="Resources\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+</Project>
