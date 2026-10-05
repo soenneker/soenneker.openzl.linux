@@ -45,4 +45,9 @@
         <None Remove="Resources\**\*" />
         <None Include="Resources\linux-x64\native\**\*" Pack="true" PackagePath="runtimes/linux-x64/native/%(RecursiveDir)%(Filename)%(Extension)" />
     </ItemGroup>
+    <Target Name="ValidateNativeAssets" BeforeTargets="PrepareForBuild;GenerateNuspec">
+        <Error Condition="!Exists('Resources/linux-x64/native/libopenzl.so')" Text="Required OpenZL native library is missing: Resources/linux-x64/native/libopenzl.so." />
+        <Error Condition="!Exists('Resources/linux-x64/native/SOURCE.txt')" Text="Required OpenZL provenance file is missing." />
+        <Error Condition="!Exists('Resources/linux-x64/native/licenses/OpenZL.txt') Or !Exists('Resources/linux-x64/native/licenses/Zstandard.txt') Or !Exists('Resources/linux-x64/native/licenses/LZ4.txt')" Text="Required OpenZL third-party licenses are missing." />
+    </Target>
 </Project>
