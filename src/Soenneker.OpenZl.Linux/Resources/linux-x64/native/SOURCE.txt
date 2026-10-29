@@ -2,4 +2,4 @@ Upstream: https://github.com/facebook/openzl.git
 Commit: 3cb9dd595836f12a6f8392c8383914ff1ecc45ee
 Runtime: linux-x64
 Version: 0.3.0
-SHA256 (libopenzl.so): dfabac3213b1bf7c30de1e825a3fda440358730ff973c9360a05cbbddc7183ee
+SHA256 (libopenzl.so): b63f2b8774026eb45305ef5d920c06e9649b5d4bf4053c1a845400ab74f04322
